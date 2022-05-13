@@ -1,6 +1,6 @@
 const { beforeAll, describe, test, expect } = require("@jest/globals");
-const { sequelize } = require("./db");
-const Restaurant = require("./restaurant");
+const { sequelize } = require("../db");
+const Restaurant = require("../models/Restaurant");
 
 describe("Restaurant", () => {
   beforeAll(async () => {
@@ -8,16 +8,10 @@ describe("Restaurant", () => {
   });
 
   test("Can create a restaurant", async () => {
-    await Restaurant.create({
+    const restaurant = await Restaurant.create({
       name: "Nando's",
       imageURL:
         "https://wembleypark.com/media/images/Nandos_Platter_in_London_Designer_.2e16d0ba.fill-496x279.png",
-    });
-
-    const restaurant = await Restaurant.findOne({
-      where: {
-        name: "Nando's",
-      },
     });
 
     expect(restaurant.id).toBe(1);
