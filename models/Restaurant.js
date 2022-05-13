@@ -1,4 +1,5 @@
 const { sequelize, DataTypes, Model } = require("../db");
+const Menu = require("./Menu");
 
 class Restaurant extends Model {}
 
@@ -19,5 +20,7 @@ Restaurant.init(
     sequelize, // We need to pass the connection instance
   }
 );
+
+Restaurant.hasMany(Menu, { as: "menus", foreignKey: "restaurant_id" });
 
 module.exports = Restaurant;
