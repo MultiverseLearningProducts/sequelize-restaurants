@@ -1,0 +1,19 @@
+{
+  "name": "restaurants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sequelize": "^6.19.0",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
