@@ -6,11 +6,11 @@ Restaurant.init(
   {
     // Model attributes are defined here
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     imageURL: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
   },

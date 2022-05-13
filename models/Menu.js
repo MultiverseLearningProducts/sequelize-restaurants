@@ -5,7 +5,7 @@ class Menu extends Model {}
 Menu.init(
   {
     title: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
   },

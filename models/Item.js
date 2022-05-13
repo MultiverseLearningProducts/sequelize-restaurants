@@ -5,7 +5,7 @@ class Item extends Model {}
 Item.init(
   {
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     price: {
